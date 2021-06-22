@@ -1,0 +1,94 @@
+@keyframes slideInFromLeft {
+  0% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(10%);
+  }
+  75% {
+    transform: translateX(-10%);
+  }
+  95% {
+    transform: translateX(5%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.navigation {
+  animation: 0.4s ease-out 0s 1 slideInFromLeft;
+  display: flex;
+  flex-direction: column;
+  margin-left: 7.5vw;
+  margin-top: 4.5vh;
+  width: 660px;
+}
+
+.section-title {
+  font-size: 0.87rem;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  transition: 1s;
+  width: 48vw;
+}
+
+/* .cards::before {
+  margin-left: -50vw;
+} */
+
+.card {
+  background-color: #202020;
+  border-radius: 5px;
+  cursor: pointer;
+  flex: 0 1 auto;
+  margin-bottom: 16px;
+  margin-right: 18px;
+  padding: 48px 26px 15px;
+  transition: 0.5s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-large {
+  width: 100%;
+}
+
+.card-medium {
+  flex-grow: 1;
+  width: 30%;
+}
+
+.card-action {
+  font-size: 0.75rem;
+  font-weight: 700;
+  /* padding-bottom: 24px; */
+  text-transform: uppercase;
+}
+
+.card-title {
+  font-size: 32px;
+  font-weight: 700;
+  line-height: 0;
+}
+
+.card-description {
+  color: #a8a8b3;
+  font-size: 0.8rem;
+  padding-top: 10px;
+}
+
+@media (max-width: 1440px) {
+  .card {
+    flex: 1 1 48vw;
+    margin-bottom: 16px;
+    margin-right: 18px;
+    padding: 48px 26px 15px;
+    transition: 0.5s;
+  }
+}
